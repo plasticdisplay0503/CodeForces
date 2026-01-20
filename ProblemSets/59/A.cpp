@@ -12,7 +12,9 @@ int main() {
         if ((int)c>=97) low++;
     }
 
-    if (low>=(n/2)) {
+    int high=n-low;
+
+    if (low>=high) {
         for (char c:s) {
             cout<<((int)c<97?(char)((int)c+32):c);
         }
@@ -21,5 +23,7 @@ int main() {
             cout<<((int)c>=97 ? (char)((int)c-32):c);
         }
     }
+    // cout<<"\n";
+    // cout<<low<<" "<<n-low<<" "<<n/2<<"\n";
     return 0;
 }
