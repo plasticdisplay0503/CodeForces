@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    long long a,b; cin>>a>>b;
+    if (b==1) {
+        cout<<"NO\n";
+        return;
+    }
+
+    if (b==2) {
+        cout<<"YES\n";
+        cout<<a<<" "<<a*(2*b-1)<<" "<<a*2*b<<"\n";
+        return;
+    }
+    cout<<"YES\n";
+    cout<<a<<" "<<a*(b-1)<<" "<<a*b<<"\n";
+}
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
